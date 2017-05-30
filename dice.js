@@ -12,21 +12,27 @@
 var number = Number(process.argv[2])
 
 //.2 Create an array with that many places
-var dice = [1, 2, 3 , 4 , 5 , 6];
+// var dice = [1, 2, 3 , 4 , 5 , 6];
 
 //.3 For each place that is the number, Math.random, for in
 
-function sixSidedDieRoll(1, 6){
-  return Math.floor(Math.random() * (max)+ max)
+function die(max, min){
+  return Math.floor(Math.random() * (max - min)+ min)
 };
 
-console.log
+// console.log(die(1,9));
 
 //.4 Display output as console.log
 
 function rollDie(num) {
+  var numRolls = [];
+  for (i = 0; i < num; i++){
+    numRolls.push(die(1,6));
+  }
+  console.log("Rolled " + num + " dice:" + numRolls);
+};
 
-}
+rollDie(number);
 
 
 
